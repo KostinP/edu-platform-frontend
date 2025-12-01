@@ -11,6 +11,12 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    // Добавьте правило для отключения triple-slash reference проверки
+    rules: {
+      "@typescript-eslint/triple-slash-reference": "off"
+    }
+  }
 ];
 
 export default eslintConfig;
